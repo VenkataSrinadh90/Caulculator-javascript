@@ -1,0 +1,115 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    padding: 10px;
+}
+
+/* Calculator Container */
+.calculator {
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(0, 0, 0, 0.849);
+    border-radius: 20px;
+    box-shadow: 2px 0 10px white;
+    overflow: hidden;
+}
+
+/* Display */
+#input-field {
+    width: 100%;
+    padding: 1em;
+    font-size: 2.5rem;
+    text-align: left;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.849);
+    color: white;
+    outline: none;
+}
+
+/* Keypad Grid */
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    padding: 1em;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    aspect-ratio: 1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50%;
+    background-color: hsl(0, 0%, 79%);
+    border: none;
+    color: black;
+    box-shadow: 2px 0 10px rgb(233, 185, 185);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 85%);
+}
+
+button:active {
+    background-color: hsl(0, 0%, 100%);
+}
+
+/* Operator buttons */
+.operator_btn {
+    background-color: rgba(235, 224, 204, 0.986);
+}
+
+.operator_btn:hover {
+    background-color: rgba(255, 166, 0, 0.779);
+}
+
+.operator_btn:active {
+    background-color: rgb(255, 166, 0);
+}
+
+/* Equal button */
+.equal-btn {
+    background-color: orange;
+}
+
+/* Media Queries */
+
+/* Small devices */
+@media (max-width: 400px) {
+    #input-field {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 280px) {
+    .keys {
+        gap: 0.5em;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    #input-field {
+        font-size: 1.5rem;
+    }
+}
